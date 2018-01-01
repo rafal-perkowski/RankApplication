@@ -318,21 +318,21 @@ class DBViewController:
 
     #GENEROWANIE FORMATU WYDRUKU TABELI
     def genStringFormat(self, lenList, sepStr, offsetStr):
-        tmpFormat = sepStr
+        formatStr = sepStr
         for listValue in range(len(lenList)):
-            tmpFormat = tmpFormat + offsetStr + "%-" + str(lenList[listValue]+len(offsetStr)) + "." + str(lenList[listValue]) +"s" + sepStr
-        return tmpFormat
+            formatStr = formatStr + offsetStr + "%-" + str(lenList[listValue]+len(offsetStr)) + "." + str(lenList[listValue]) +"s" + sepStr
+        return formatStr
 
     #DRUKOWANIE WIERSZY TABELI
-    def printTabRows(self, formatStr, krotkaStr):
-        print(formatStr % krotkaStr)
+    def printTabRows(self, formatStr, tupleStr):
+        print(formatStr % tupleStr)
     
     #DRUKOWANIE TABELI 
     def printTable(self, fetchResult, columnNamesList, maxLenList, sepStr, offsetStr):
         print(self.printHeader(columnNamesList, maxLenList, sepStr, offsetStr))
-        formatString = self.genStringFormat(maxLenList, sepStr, offsetStr)
+        formatStr = self.genStringFormat(maxLenList, sepStr, offsetStr)
         for i in range(len(fetchResult)):
-            self.printTabRows(formatString, fetchResult[i])
+            self.printTabRows(formatStr, fetchResult[i])
 
     #FUNKCJA ZWRACAJACA PRAWDE/FAŁSZ ZALEZNIE OD WYBRANEJ OPCJI PRZEZ UZYTKOWNIKA
     def choiceInput(self, introStr, errorStr, trueStr, falseStr):

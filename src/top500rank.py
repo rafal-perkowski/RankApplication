@@ -290,7 +290,7 @@ class DBConnection:
                 self.charsetStr = charsetStr
                 self.portInt = portInt
                 self.dbConnection = pymysql.connect(self.hostStr, self.userStr, self.passwdStr, self.databaseStr, charset=self.charsetStr, port=self.portInt)
-                self.dbCursor = self.connectionConnection.cursor()
+                self.dbCursor = self.dbConnection.cursor()
                 print("DBConnection: Połączenie z bazą danych zostało ustanowione!")
         except:
             print("DBConnection: Błąd połączenia z bazą danych!")

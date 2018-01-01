@@ -8,5 +8,5 @@
 # port - numer portu na serwerze bazy danych (domyślna wartość: 3306)
 # [host, user, password, db, charset, port]
 
-#DANE LOGOWANIA DO BAZY DANYCH DLA APLIKACJI - W POSTACI LISTY
+#DANE LOGOWANIA DO SERWERA BAZY DANYCH DLA APLIKACJI - W POSTACI LISTY
 loginList=["localhost", "root", "***", "top500rank", "utf8mb4", 3306]

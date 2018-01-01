@@ -328,8 +328,8 @@ class DBViewController:
         print(formatStr % krotkaStr)
     
     #DRUKOWANIE TABELI 
-    def printTable(self, fetchResult, columnNames, maxLenList, sepStr, offsetStr):
-        print(self.printHeader(columnNames, maxLenList, sepStr, offsetStr))
+    def printTable(self, fetchResult, columnNamesList, maxLenList, sepStr, offsetStr):
+        print(self.printHeader(columnNamesList, maxLenList, sepStr, offsetStr))
         formatString = self.genStringFormat(maxLenList, sepStr, offsetStr)
         for i in range(len(fetchResult)):
             self.printTabRows(formatString, fetchResult[i])
@@ -351,9 +351,9 @@ class DBViewController:
         return flagReturnBool
 
     #FUNCKJA WYSWIETLAJACA SFORMATOWANA STRONE WYBRANEJ TABELI
-    def displayFetchRows(self, dbCursor, columnNames, maxLenList, displayInt=50):
+    def displayFetchRows(self, dbCursor, columnNamesList, maxLenList, displayInt=50):
         flagWhileBool = True
-        countRows = 0
+        countRowsInt = 0
         fetchRows = dbCursor.fetchall()
         fetchRowsLen = len(fetchRows)
         if(fetchRowsLen == 0):
@@ -362,9 +362,9 @@ class DBViewController:
             print("W tabeli znaleziono: [" + str(fetchRowsLen) + "] rekordów!")
             print()
             while(flagWhileBool):
-                displayRows = fetchRows[countRows : countRows+displayInt]
-                countRows += displayInt
-                self.printTable(displayRows, columnNames, maxLenList, "|", " ")
+                displayRows = fetchRows[countRowsInt : countRowsInt + displayInt]
+                countRowsInt += displayInt
+                self.printTable(displayRows, columnNamesList, maxLenList, "|", " ")
                 if(len(displayRows) < displayInt):
                     flagWhileBool = False
                 else:

@@ -257,14 +257,15 @@ class DBQuery:
 #KLASA WYKORZYSTYWANA DO ZESTAWIENIA I ZAKONCZENIA POLACZENIA Z BAZA DANYCH
 class DBConnection:
     
-    def __init__(self, hostStr="", userStr="", passwdStr="", databaseStr="", charsetStr=""):
+    def __init__(self, hostStr="", userStr="", passwdStr="", databaseStr="", charsetStr="", portInt=None, dbConnection=None, dbCursor=None):
         self.hostStr = hostStr
         self.userStr = userStr
         self.passwdStr = passwdStr
         self.databaseStr = databaseStr
         self.charsetStr = charsetStr
-        self.dbConnection = None
-        self.dbCursor = None
+        self.portInt = portInt
+        self.dbConnection = dbConnection
+        self.dbCursor = dbCursor
 
     #ZWRACA REFERENCJE BIEZACEGO POLACZENIA DO BAZY DANYCH
     def getConnection(self):
@@ -287,7 +288,7 @@ class DBConnection:
                 self.passwdStr = passwdStr
                 self.databaseStr = databaseStr
                 self.charsetStr = charsetStr
-				self.portInt = portInt
+                self.portInt = portInt
                 self.dbConnection = pymysql.connect(self.hostStr, self.userStr, self.passwdStr, self.databaseStr, charset=self.charsetStr, port=self.portInt)
                 self.dbCursor = self.connectionConnection.cursor()
                 print("DBConnection: Połączenie z bazą danych zostało ustanowione!")

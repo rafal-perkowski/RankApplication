@@ -516,8 +516,8 @@ class DBAdminController:
     def insertDB(self, indexTab):
         insertBool = None    
         try:
-            sqlTuple = self.insertInput(indexTab)
-            statementStr = self.dbQuery.genStatement(self.dbQuery.insertIntoValues[self.dbQuery.insertIntoIndex[indexTab]],sqlTuple)
+            tupleStr = self.insertInput(indexTab)
+            statementStr = self.dbQuery.genStatement(self.dbQuery.insertIntoValues[self.dbQuery.insertIntoIndex[indexTab]],tupleStr)
             self.dbCursor.execute(statementStr)
             self.dbConnection.commit()
             insertBool = True

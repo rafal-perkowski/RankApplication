@@ -1,6 +1,6 @@
 = README - RANK APPLICATION
 
-:githubdir: https://github.com/rperkow
+:githubdir: https://github.com/rafal-perkowski
 :projectdir: /RankApplication
 :blobmasterdir: /blob/master
 :srcdir: src

@@ -631,8 +631,6 @@ class DBMenu:
     
     menuAList = ["SELECT", "INSERT", "UPDATE", "DELETE", "-QUIT-"]
     optionsAList = [["1","S"], ["2","I"], ["3","U"], ["4", "D"], ["5", "Q"]]
-    menuBList = ["ONE", "ALL", "BACK"]
-    optionsBList = [["1","O"], ["2","C"], ["3","B"]]
     menuTabList = ["--BACK--"]
     optionsTabList = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","B"]
     optionsColList = ["1","2","3","4","5","6","7","8","9","10"]

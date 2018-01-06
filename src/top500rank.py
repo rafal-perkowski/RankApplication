@@ -147,20 +147,20 @@ class DBModel:
     
     #GENEROWANIE SKROTU HASLA WEDLUG PODANEJ METODY Z BIBLIOTEKI "hashlib"
     def genPassword(self, passwordStr="", hashAlgorithm="sha256"):
-        hashString = None
+        hashStr = None
         if(hashAlgorithm == "md5"):
-            hashString = hashlib.md5(passwordStr.encode('utf-8')).hexdigest()
+            hashStr = hashlib.md5(passwordStr.encode('utf-8')).hexdigest()
         elif(hashAlgorithm == "sha1"):
-            hashString = hashlib.sha1(passwordStr.encode('utf-8')).hexdigest()
+            hashStr = hashlib.sha1(passwordStr.encode('utf-8')).hexdigest()
         elif(hashAlgorithm == "sha224"):
-            hashString = hashlib.sha224(passwordStr.encode('utf-8')).hexdigest()
+            hashStr = hashlib.sha224(passwordStr.encode('utf-8')).hexdigest()
         elif(hashAlgorithm == "sha256"):
-            hashString = hashlib.sha256(passwordStr.encode('utf-8')).hexdigest()
+            hashStr = hashlib.sha256(passwordStr.encode('utf-8')).hexdigest()
         elif(hashAlgorithm == "sha384"):
-            hashString = hashlib.sha384(passwordStr.encode('utf-8')).hexdigest()
+            hashStr = hashlib.sha384(passwordStr.encode('utf-8')).hexdigest()
         elif(hashAlgorithm == "sha512"):
-            hashString = hashlib.sha512(passwordStr.encode('utf-8')).hexdigest()
-        return hashString
+            hashStr = hashlib.sha512(passwordStr.encode('utf-8')).hexdigest()
+        return hashStr
     
     #WYDRUK SLOWNIKA NAZW KOLUMN, KLUCZE: INDEKSY TABEL, WARTOSCI: NAZWY KOLUMN
     def printNamesDict(self, dictDict):
@@ -311,10 +311,10 @@ class DBViewController:
 
     #DRUKOWANIE NAGLOWKA TABELI
     def printHeader(self, colList, lenList, sepStr, offsetStr):
-        tmpString = sepStr
+        tmpStr = sepStr
         for listValue in range(len(colList)):
-            tmpString = tmpString + offsetStr + colList[listValue].upper().center(lenList[listValue]+len(offsetStr)) + sepStr
-        return tmpString
+            tmpStr = tmpStr + offsetStr + colList[listValue].upper().center(lenList[listValue]+len(offsetStr)) + sepStr
+        return tmpStr
 
     #GENEROWANIE FORMATU WYDRUKU TABELI
     def genStringFormat(self, lenList, sepStr, offsetStr):

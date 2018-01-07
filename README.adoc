@@ -3,6 +3,7 @@
 :githubdir: https://github.com/rafal-perkowski
 :projectdir: /RankApplication
 :blobmasterdir: /blob/master
+:imgdir: img
 :srcdir: src
 
 ## Wstęp
@@ -38,6 +39,25 @@ W ramach modelu w pliku link:{srcdir}/top500rank.py[top500rank.py] zaimplementow
 * *DBUserController* - klasa kontrolera menu użytkownika obsługująca jego dane wejściowe, wykonująca zapytania w bazie danych i wyświetlająca ich wyniki.
 * *DBMenu* - klasa organizująca i wyświetlająca kilkupoziomowe menu administratora i użytkownika.
 ====
+
+## Zrzuty ekranu
+
+W katalogu link:{imgdir}[[_img_]] zostały umieszczone zrzuty ekranu aplikacji:
+
+* Okno logowania aplikacji link:{imgdir}/01-login-window.png[[_img_]]
+* Menu administratora link:{imgdir}/02-admin-menu.png[[_img_]]
+* Menu administratora (tabela 1) link:{imgdir}/03-admin-table-1.png[[_img_]]
+* Menu administratora (tabela 2) link:{imgdir}/04-admin-table-2.png[[_img_]]
+* Menu administratora (tabela 3) link:{imgdir}/05-admin-table-3.png[[_img_]]
+* Menu użytkownika link:{imgdir}/06-user-menu.png[[_img_]]
+* Menu użytkownika (tabela 1.1) link:{imgdir}/07-user-table-1.png[[_img_]]
+* Menu użytkownika (tabela 1.2) link:{imgdir}/08-user-table-2.png[[_img_]]
+* Menu użytkownika (tabela 2.1) link:{imgdir}/09-user-table-3.png[[_img_]]
+* Menu użytkownika (tabela 2.2) link:{imgdir}/10-user-table-4.png[[_img_]]
+* Menu użytkownika (tabela 3.1) link:{imgdir}/11-user-table-5.png[[_img_]]
+* Menu użytkownika (tabela 3.2) link:{imgdir}/12-user-table-6.png[[_img_]]
+* Menu użytkownika (tabela 4.1) link:{imgdir}/13-user-table-7.png[[_img_]]
+* Menu użytkownika (tabela 4.2) link:{imgdir}/14-user-table-8.png[[_img_]]
 
 ## Materiały
 

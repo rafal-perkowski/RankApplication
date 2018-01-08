@@ -21,13 +21,13 @@ W ramach kolejnego etapu kursu Back-End Developer PWN należało wykonać aplika
 
 ### Opis aplikacji
 
-W ramach projektu została wykonana aplikacja w języku Python łącząca z bazą danych rankingu superkomputerów, której implementacja została zamieszczona w repozytorium *_RankDatabase_*.
+W projekcie została wykonana aplikacja w języku Python łącząca z bazą danych rankingu superkomputerów, której implementacja została zamieszczona w repozytorium *_RankDatabase_*.
 
 Aplikacja powstała w zgodności z modelem/wzorcem MVC (Model View Controller).
 
 ### Model MVC
 
-W ramach modelu w pliku link:{srcdir}/top500rank.py[top500rank.py] zaimplementowano 8 następujących klas:
+W pliku źródłowym link:{srcdir}/top500rank.py[top500rank.py] zaimplementowano 8 następujących klas:
 
 ====
 * *DBModel* - klasa odwzorowująca model bazy danych w postaci list nazw tabel/widoków i kolumn wraz z metodami, które na nich operują.
